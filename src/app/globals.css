@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  /* Accent color - vibrant purple/blue gradient */
-  --color-accent: #6366f1;
-  --color-accent-light: #818cf8;
-  --color-accent-dark: #4f46e5;
+  /* Accent color - vibrant purple gradient */
+  --color-accent: #8b5cf6;
+  --color-accent-light: #a78bfa;
+  --color-accent-dark: #7c3aed;
 
   /* Light mode */
   --bg-primary: #ffffff;
@@ -21,20 +21,20 @@
 }
 
 .dark {
-  --color-accent: #818cf8;
-  --color-accent-light: #a5b4fc;
-  --color-accent-dark: #6366f1;
+  --color-accent: #a78bfa;
+  --color-accent-light: #c4b5fd;
+  --color-accent-dark: #8b5cf6;
 
-  /* Dark mode */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
-  --text-tertiary: #94a3b8;
-  --border-color: #334155;
-  --glass-bg: rgba(15, 23, 42, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  /* Dark mode - Deep black with purple accents */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #141414;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --border-color: #27272a;
+  --glass-bg: rgba(10, 10, 10, 0.7);
+  --glass-border: rgba(139, 92, 246, 0.1);
 }
 
 @layer base {

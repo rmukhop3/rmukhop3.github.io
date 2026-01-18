@@ -83,7 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="mb-8 flex justify-center"
           >
-            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">
               <img
                 src="/profile.jpg"
                 alt={resumeData.name}
@@ -146,22 +146,6 @@ export default function Hero() {
             >
               Download Resume
             </button>
-          </motion.div>
-
-          {/* Scroll indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.4 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-6 h-10 border-2 border-[var(--text-tertiary)] rounded-full flex justify-center p-2"
-            >
-              <motion.div className="w-1.5 h-1.5 bg-[var(--text-tertiary)] rounded-full" />
-            </motion.div>
           </motion.div>
         </motion.div>
       </div>
