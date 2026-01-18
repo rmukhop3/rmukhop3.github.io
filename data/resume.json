@@ -1,0 +1,242 @@
+{
+  "name": "Riyank Mukhopadhyay",
+  "title": "Machine Learning Engineer",
+  "tagline": "Specializing in Generative AI, Computer Vision & Cloud Infrastructure",
+  "location": "Tempe, AZ",
+  "email": "rmukhop3@asu.edu",
+  "phone": "(602) 810-9266",
+  "website": "https://rmukhop3.github.io",
+  "github": "rmukhop3",
+  "linkedin": "riyankmukhopadhyay",
+  "summary": "Machine Learning Engineer with expertise in Generative AI, Computer Vision, and Cloud Infrastructure. Proven track record of building scalable ML systems, optimizing RAG applications, and deploying production-ready AI solutions on AWS. Specialized in multi-agent systems, vector databases, and serverless architectures.",
+  "skills": [
+    {
+      "category": "Areas of Interest",
+      "items": [
+        { "name": "Generative AI", "level": 5, "icon": "brain" },
+        { "name": "Computer Vision", "level": 5, "icon": "eye" },
+        { "name": "Backend Development", "level": 4, "icon": "server" },
+        { "name": "Cloud & Security", "level": 4, "icon": "cloud" }
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        { "name": "Python", "level": 5, "icon": "python" },
+        { "name": "Java", "level": 4, "icon": "java" },
+        { "name": "C/C++", "level": 4, "icon": "code" },
+        { "name": "Bash", "level": 4, "icon": "terminal" },
+        { "name": "SQL", "level": 4, "icon": "database" },
+        { "name": "Terraform", "level": 4, "icon": "infrastructure" }
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": [
+        { "name": "TensorFlow", "level": 5, "icon": "tensorflow" },
+        { "name": "PyTorch", "level": 5, "icon": "pytorch" },
+        { "name": "AutoGen", "level": 4, "icon": "ai" },
+        { "name": "Transformers", "level": 5, "icon": "transformer" },
+        { "name": "LlamaIndex", "level": 4, "icon": "llama" },
+        { "name": "FastAPI", "level": 4, "icon": "api" },
+        { "name": "OpenCV", "level": 5, "icon": "opencv" },
+        { "name": "Hadoop", "level": 3, "icon": "hadoop" }
+      ]
+    },
+    {
+      "category": "Cloud & Tools",
+      "items": [
+        { "name": "AWS", "level": 5, "icon": "aws" },
+        { "name": "Docker", "level": 5, "icon": "docker" },
+        { "name": "Kubernetes", "level": 4, "icon": "kubernetes" },
+        { "name": "Jenkins", "level": 4, "icon": "jenkins" },
+        { "name": "Git", "level": 5, "icon": "git" },
+        { "name": "Datadog", "level": 3, "icon": "monitoring" }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "asu-mle",
+      "company": "Arizona State University",
+      "companyLogo": "asu",
+      "location": "Tempe, AZ",
+      "role": "Machine Learning Engineer",
+      "start": "Oct 2023",
+      "end": "Present",
+      "description": "Leading ML infrastructure and RAG-based AI systems development",
+      "bullets": [
+        "Automated cloud infrastructure provisioning using Terraform and Jenkins, deploying ASUGPT, MyAIBuilder, and custom APIs across POC, Beta, and Production environments on AWS",
+        "Developed a serverless Data Indexer leveraging data ingestion in AWS OpenSearch Serverless/Cluster, MemoryDB, Azure Cognitive Search, and Milvus vector databases, enabling scalable indexing of 35+ file formats via multi-stage Docker builds on Kaniko",
+        "Designed and implemented a custom vector index for multi-agent RAG-based search and retrieval, optimizing context-aware responses for the DSL AI Companion Chatbot using course materials from BIO-181 (Canvas LMS)",
+        "Architected the Integration Engine, an API-based ETL platform for real-time data ingestion into vector databases from data sources such as Guru, ServiceNow, Canvas, and iSearch, leveraging a serverless architecture with a cron-based scheduling system",
+        "Developed a scalable OCR endpoint for multimodal LLM support, enabling advanced text extraction from handwritten documents and images in a fully serverless environment",
+        "Enhanced ingestion speeds by 3x for large-scale RAG applications, reducing bottlenecks in chunking, tokenization, and embedding stages using parallel processing, batching, and optimized multi-threading techniques"
+      ],
+      "tech": ["Python", "AWS", "Terraform", "Docker", "OpenSearch", "LlamaIndex", "FastAPI"]
+    },
+    {
+      "id": "sportsbox",
+      "company": "Sportsbox.AI",
+      "companyLogo": "sportsbox",
+      "location": "Bellevue, WA",
+      "role": "Machine Learning Engineer Intern",
+      "start": "Jun 2022",
+      "end": "Aug 2022",
+      "description": "Computer vision systems for sports biomechanics analysis",
+      "bullets": [
+        "Optimized and scaled ML infrastructure supporting 2D/3D human pose estimation models for Golf swing detection and ball tracking, improving responsiveness for 2k+ users across Android and web applications",
+        "Trained OpenPose model for single-camera human motion analysis, improving pose estimation accuracy metric for Golf biomechanics applications"
+      ],
+      "tech": ["Python", "PyTorch", "OpenPose", "OpenCV", "Computer Vision"]
+    },
+    {
+      "id": "cair",
+      "company": "Centre for Artificial Intelligence & Robotics (CAIR)",
+      "companyLogo": "cair",
+      "location": "Bangalore, India",
+      "role": "Computer Vision Engineer",
+      "start": "Dec 2019",
+      "end": "Jun 2021",
+      "description": "Biometric identification systems development",
+      "bullets": [
+        "Developed a biometric computer vision system combining 3D spatial gait and face recognition for real-time identification of person of interest, achieving 85%+ rank-1 accuracy in real-world deployments",
+        "Implemented multi-camera tracking and recognition, deploying the system on-premises across multiple AXIS M55 PTZ cameras, ensuring consistent identity tracking across different viewpoints"
+      ],
+      "tech": ["Python", "OpenCV", "TensorFlow", "Computer Vision", "Multi-camera Systems"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "sarah",
+      "title": "SARAH: Semi-Automated Rehabilitation at Home",
+      "subtitle": "ASU Geometric Media Lab",
+      "hero": "/projects/sarah-hero.jpg",
+      "gallery": ["/projects/sarah-1.jpg", "/projects/sarah-2.jpg", "/projects/sarah-3.jpg"],
+      "description": "Computer vision-based rehabilitation system for assessing upper extremity movement quality in stroke survivors, improving adaptive therapy assessments based on the Action Research Arm Test (ARAT).",
+      "challenge": "Stroke survivors need continuous assessment of upper extremity movement quality to optimize rehabilitation therapy, but manual assessments are time-consuming and subjective.",
+      "solution": "Developed an automated computer vision system using Detectron2 for object detection with intelligent tracking, achieving 90%+ accuracy in detecting 16 different ARAT objects across 106 patients. Enhanced 3D hand-mesh reconstruction using RGBD image data and transformer-based models.",
+      "tech": ["Python", "Detectron2", "PyTorch", "Computer Vision", "Transformers", "RGBD"],
+      "highlights": [
+        "90%+ detection accuracy across 16 ARAT objects",
+        "Three-angle viewing system for comprehensive assessment",
+        "Tested on 106 stroke survivor patients",
+        "3D hand-mesh reconstruction with transformer models"
+      ],
+      "start": "Fall 2022",
+      "end": "Spring 2023",
+      "live": null,
+      "repo": null,
+      "paper": "In progress"
+    },
+    {
+      "id": "rlhf-viz",
+      "title": "Interactive RL Policy Visualization",
+      "subtitle": "Data Visualization, ASU",
+      "hero": "/projects/rlhf-hero.jpg",
+      "gallery": ["/projects/rlhf-1.jpg", "/projects/rlhf-2.jpg"],
+      "description": "Visualization interface for interactively manipulating and tweaking the Comprehensible Abstract Policy Summaries (CAPS) algorithm for training RL agents on OpenAI Gym environments.",
+      "challenge": "Reinforcement learning policies are often black boxes, making it difficult to understand and debug agent behavior. Researchers need interpretable visualizations to improve policy optimization.",
+      "solution": "Built an interactive visualization dashboard that exposes Action/Reward/Value distributions, enabling detailed exploration and analysis of RL model policies. The system contributed to a 20% improvement in policy optimization.",
+      "tech": ["Python", "D3.js", "React", "OpenAI Gym", "Reinforcement Learning"],
+      "highlights": [
+        "Interactive CAPS algorithm manipulation",
+        "Action/Reward/Value distribution analysis",
+        "20% improvement in policy optimization",
+        "Journal paper submitted to Visual Informatics 2024"
+      ],
+      "start": "Spring 2023",
+      "end": "Spring 2023",
+      "live": null,
+      "repo": null,
+      "paper": "Submitted to Visual Informatics 2024"
+    },
+    {
+      "id": "asugpt",
+      "title": "ASUGPT & MyAIBuilder",
+      "subtitle": "Production AI Chatbot Platform",
+      "hero": "/projects/asugpt-hero.jpg",
+      "gallery": ["/projects/asugpt-1.jpg", "/projects/asugpt-2.jpg"],
+      "description": "Enterprise-scale RAG-based chatbot platform serving Arizona State University community with multi-agent architecture and real-time data ingestion from multiple sources.",
+      "challenge": "Build a scalable, production-ready AI chatbot platform that can ingest data from 35+ file formats, integrate with multiple enterprise data sources, and provide context-aware responses to thousands of users.",
+      "solution": "Architected a serverless platform on AWS with automated infrastructure provisioning via Terraform, custom vector indexing in OpenSearch, and an Integration Engine for real-time ETL from Canvas, ServiceNow, Guru, and iSearch. Enhanced ingestion speeds by 3x through parallel processing optimization.",
+      "tech": ["Python", "AWS", "Terraform", "OpenSearch", "Docker", "FastAPI", "LlamaIndex"],
+      "highlights": [
+        "Supports 35+ file formats with serverless indexing",
+        "3x faster ingestion with parallel processing",
+        "Multi-agent RAG architecture",
+        "Real-time data sync from 4+ enterprise sources",
+        "Deployed across POC, Beta, and Production environments"
+      ],
+      "start": "Oct 2023",
+      "end": "Present",
+      "live": "https://asugpt.asu.edu",
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "anomaly-detection",
+      "title": "Anomaly Detection in Time-Series Data",
+      "subtitle": "Statistical Machine Learning, ASU",
+      "hero": "/projects/anomaly-hero.jpg",
+      "gallery": ["/projects/anomaly-1.jpg"],
+      "description": "Comprehensive study of supervised and unsupervised machine learning techniques for detecting rare and unusual instances in time-series Walmart data.",
+      "challenge": "Identify anomalies in large-scale time-series retail data using both labeled and unlabeled approaches, optimizing for both accuracy and computational efficiency.",
+      "solution": "Applied multiple algorithms including XGBoost, SVM, MLP for supervised learning, and One-Class SVM, Isolation Forest, DBSCAN, FB Prophet, and GluonTS for unsupervised detection. Evaluated performance using MAE, MSE, and F1 metrics.",
+      "tech": ["Python", "XGBoost", "SVM", "DBSCAN", "FB Prophet", "GluonTS", "scikit-learn"],
+      "highlights": [
+        "Comparative analysis of 10+ ML algorithms",
+        "Both supervised and unsupervised approaches",
+        "Optimized for computational efficiency",
+        "Production-ready anomaly detection pipeline"
+      ],
+      "start": "Spring 2022",
+      "end": "Spring 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.S. Computer Science",
+      "school": "Arizona State University",
+      "location": "Tempe, AZ",
+      "specialization": "Artificial Intelligence",
+      "start": "Aug 2021",
+      "end": "May 2023",
+      "gpa": "3.93 / 4.00",
+      "courses": [
+        "Artificial Intelligence",
+        "Machine Vision & Pattern Recognition",
+        "Data Intensive Systems for Machine Learning",
+        "Data Science",
+        "Cloud Computing"
+      ]
+    },
+    {
+      "degree": "B.Tech. Computer Science",
+      "school": "Amrita University",
+      "location": "Coimbatore, India",
+      "specialization": "First class with distinction",
+      "start": "May 2016",
+      "end": "Aug 2020",
+      "gpa": "3.75 / 4.00",
+      "courses": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Compiler Design",
+        "Computer Networks",
+        "Computer Organization & Architecture"
+      ]
+    }
+  ],
+  "awards": [],
+  "interests": [
+    "Generative AI",
+    "Computer Vision",
+    "Distributed Systems",
+    "Open Source",
+    "Technical Writing"
+  ]
+}
