@@ -89,7 +89,14 @@ export default function Experience() {
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
                           <h3 className="heading-sm mb-2">{exp.role}</h3>
-                          <div className="text-accent font-medium mb-1">
+                          <div className="flex items-center gap-2 text-accent font-medium mb-1">
+                            {exp.companyLogo && (
+                              <img
+                                src={`/logos/${exp.companyLogo}.png`}
+                                alt={`${exp.company} logo`}
+                                className="w-6 h-6 object-contain"
+                              />
+                            )}
                             {exp.company}
                           </div>
                           <div className="text-sm text-[var(--text-tertiary)]">
@@ -147,18 +154,16 @@ export default function Experience() {
                                 ))}
                               </ul>
 
-                              {/* Tech stack */}
-                              <div className="pt-4">
-                                <div className="flex flex-wrap gap-2">
-                                  {exp.tech.map((tech) => (
-                                    <span
-                                      key={tech}
-                                      className="px-3 py-1 text-xs font-medium bg-accent/10 text-accent rounded-full"
-                                    >
-                                      {tech}
-                                    </span>
-                                  ))}
-                                </div>
+                              {/* Tech Stack */}
+                              <div className="flex flex-wrap gap-2 pt-2">
+                                {exp.tech.map((tech, i) => (
+                                  <span
+                                    key={i}
+                                    className="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent"
+                                  >
+                                    {tech}
+                                  </span>
+                                ))}
                               </div>
                             </div>
                           </motion.div>

@@ -76,11 +76,27 @@ export default function Hero() {
           style={prefersReducedMotion ? {} : { scale, opacity, y }}
           className="relative z-10 container-custom text-center px-4"
         >
+          {/* Profile Picture */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="mb-8 flex justify-center"
+          >
+            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-accent/20 shadow-2xl">
+              <img
+                src="/profile.jpg"
+                alt={resumeData.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
           {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             className="heading-xl mb-6"
           >
             Hi, I'm{' '}
@@ -93,7 +109,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
             className="text-xl md:text-2xl lg:text-3xl text-[var(--text-secondary)] mb-4 max-w-4xl mx-auto"
           >
             {resumeData.title}
@@ -103,7 +119,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+            transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
             className="text-lg md:text-xl text-[var(--text-tertiary)] mb-12 max-w-3xl mx-auto"
           >
             {resumeData.tagline}
@@ -113,7 +129,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+            transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button
@@ -136,7 +152,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
+            transition={{ duration: 1, delay: 1.4 }}
             className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           >
             <motion.div
