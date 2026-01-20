@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import resumeData from '@/data/resume.json'
 import ScrollFrame from './ScrollFrame'
+import GradientMesh from './GradientMesh'
 
 /**
  * Hero Component - Apple-style immersive scroll entrance
@@ -55,21 +56,16 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-[200vh] bg-gradient-to-b from-[var(--bg-primary)] via-[var(--bg-secondary)] to-[var(--bg-primary)]"
+      className="relative h-[200vh] bg-[var(--bg-primary)]"
       id="home"
     >
       {/* Sticky container for parallax effect */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        {/* Background frame animation - only if motion is enabled */}
-        {!prefersReducedMotion && (
-          <ScrollFrame
-            scrollProgress={scrollYProgress}
-            className="absolute inset-0 z-0"
-          />
-        )}
+        {/* Animated gradient mesh background */}
+        <GradientMesh variant="multicolor" className="z-0" />
 
-        {/* Static gradient background fallback */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/10" />
+        {/* Radial gradient overlay */}
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--bg-primary)_0%,_transparent_50%)]" />
 
         {/* Hero content */}
         <motion.div
