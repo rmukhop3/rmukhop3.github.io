@@ -118,7 +118,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[var(--border-color)] flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-[var(--text-tertiary)]">
-            © {currentYear} {resumeData.name}. Built with Next.js & Tailwind CSS.
+            © {currentYear} {resumeData.name}.
           </p>
           <p className="text-sm text-[var(--text-tertiary)]">
             Designed & Developed with care ✨
