@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import resumeData from '@/data/resume.json'
 import Icon from '../Icon'
+import GradientMesh from '../GradientMesh'
 
 export default function Certifications() {
   const [ref, inView] = useInView({
@@ -31,13 +32,14 @@ export default function Certifications() {
   }
 
   return (
-    <section id="certifications" className="section bg-[var(--bg-primary)]">
+    <section id="certifications" className="section relative bg-[var(--bg-primary)] overflow-hidden">
+      <GradientMesh variant="certifications" />
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="container-custom"
+        className="container-custom relative z-10"
       >
         <motion.h2 variants={itemVariants} className="heading-lg text-center mb-16">
           Licenses & Certifications

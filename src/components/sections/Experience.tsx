@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import resumeData from '@/data/resume.json'
 import Icon from '../Icon'
+import GradientMesh from '../GradientMesh'
 
 export default function Experience() {
   const [ref, inView] = useInView({
@@ -36,13 +37,14 @@ export default function Experience() {
   }
 
   return (
-    <section id="experience" className="section bg-[var(--bg-secondary)]">
+    <section id="experience" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+      <GradientMesh variant="experience" />
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="container-custom"
+        className="container-custom relative z-10"
       >
         <motion.h2 variants={itemVariants} className="heading-lg text-center mb-16">
           Experience

@@ -62,7 +62,7 @@ export default function Hero() {
       {/* Sticky container for parallax effect */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         {/* Animated gradient mesh background */}
-        <GradientMesh variant="multicolor" className="z-0" />
+        <GradientMesh variant="hero" className="z-0" />
 
         {/* Radial gradient overlay */}
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--bg-primary)_0%,_transparent_50%)]" />

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import resumeData from '@/data/resume.json'
 import Icon from '../Icon'
+import GradientMesh from '../GradientMesh'
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -68,7 +69,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section bg-[var(--bg-secondary)]">
+    <section id="contact" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+      <GradientMesh variant="contact" />
       <motion.div
         ref={ref}
         variants={containerVariants}
