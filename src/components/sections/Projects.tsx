@@ -41,7 +41,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section relative bg-[var(--bg-primary)] overflow-hidden">
-      <GradientMesh variant="blue" />
+      <GradientMesh variant="projects" />
       <motion.div
         ref={ref}
         variants={containerVariants}

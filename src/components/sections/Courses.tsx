@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import resumeData from '@/data/resume.json'
+import GradientMesh from '../GradientMesh'
 
 export default function Courses() {
   const [ref, inView] = useInView({
@@ -30,7 +31,8 @@ export default function Courses() {
   }
 
   return (
-    <section id="courses" className="section bg-[var(--bg-secondary)]">
+    <section id="courses" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+      <GradientMesh variant="courses" />
       <motion.div
         ref={ref}
         variants={containerVariants}
