@@ -3,6 +3,8 @@ import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
 import Experience from '@/components/sections/Experience'
 import Projects from '@/components/sections/Projects'
+import Courses from '@/components/sections/Courses'
+import Certifications from '@/components/sections/Certifications'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
@@ -16,6 +18,8 @@ export default function Home() {
       <Skills />
       <Experience />
       <Projects />
+      <Courses />
+      <Certifications />
       <Contact />
       <Footer />
     </main>

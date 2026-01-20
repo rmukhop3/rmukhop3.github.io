@@ -85,25 +85,26 @@
       "end": "Aug 2022",
       "description": "Computer vision systems for sports biomechanics analysis",
       "bullets": [
-        "Optimized and scaled ML infrastructure supporting 2D/3D human pose estimation models for Golf swing detection and ball tracking, improving responsiveness for 2k+ users across Android and web applications",
-        "Trained OpenPose model for single-camera human motion analysis, improving pose estimation accuracy metric for Golf biomechanics applications"
+        "Maintained, tuned, and developed new features by enhancing the end-to-end AI project lifecycle (2D/3D Pose estimation models, Golf swing detection, Ball tracking) for over 5K customers",
+        "Enabled multi-GPU Training Support using CUDA programming for 2D/3D training pipelines resulting in 66% decreased training time",
+        "Performed a key role in moving the on-premises infrastructure to Google Cloud's Vertex AI platform for model training"
       ],
-      "tech": ["Python", "PyTorch", "OpenPose", "OpenCV", "Computer Vision"]
+      "tech": ["Python", "PyTorch", "CUDA", "OpenPose", "OpenCV", "Google Cloud", "Vertex AI"]
     },
     {
       "id": "cair",
       "company": "Centre for Artificial Intelligence & Robotics (CAIR)",
       "companyLogo": "cair",
       "location": "Bangalore, India",
-      "role": "Computer Vision Engineer",
+      "role": "Computer Vision Research Engineer",
       "start": "Dec 2019",
       "end": "Jun 2021",
       "description": "Biometric identification systems development",
       "bullets": [
-        "Developed a biometric computer vision system combining 3D spatial gait and face recognition for real-time identification of person of interest, achieving 85%+ rank-1 accuracy in real-world deployments",
-        "Implemented multi-camera tracking and recognition, deploying the system on-premises across multiple AXIS M55 PTZ cameras, ensuring consistent identity tracking across different viewpoints"
+        "Developed an interactive GUI application for selectively tracking and recognizing multiple individuals using a multi-camera setup for cross-view 3D gait recognition in real-time",
+        "Implemented an approach for generating 3D point clouds of human bodies from multiple viewpoints using a stereo camera system, achieving an accuracy rate of 94.7% for over 100 individuals in challenging co-variate conditions"
       ],
-      "tech": ["Python", "OpenCV", "TensorFlow", "Computer Vision", "Multi-camera Systems"]
+      "tech": ["Python", "OpenCV", "TensorFlow", "Computer Vision", "Multi-camera Systems", "3D Point Clouds"]
     }
   ],
   "projects": [
@@ -123,33 +124,33 @@
         "Tested on 106 stroke survivor patients",
         "3D hand-mesh reconstruction with transformer models"
       ],
-      "start": "Fall 2022",
-      "end": "Spring 2023",
+      "start": "Aug 2022",
+      "end": "May 2023",
       "live": null,
       "repo": null,
       "paper": "In progress"
     },
     {
       "id": "rlhf-viz",
-      "title": "Interactive RL Policy Visualization",
+      "title": "Interactively Summarizing Reinforcement Learning Policies",
       "subtitle": "Data Visualization, ASU",
       "hero": "/projects/rlhf-hero.jpg",
       "gallery": ["/projects/rlhf-1.jpg", "/projects/rlhf-2.jpg"],
-      "description": "Visualization interface for interactively manipulating and tweaking the Comprehensible Abstract Policy Summaries (CAPS) algorithm for training RL agents on OpenAI Gym environments.",
+      "description": "Interactive visualization interface for manipulating the Comprehensible Abstract Policy Summaries (CAPS) algorithm for training RL agents on OpenAI Gym environments (Mountain Car and Lunar Lander).",
       "challenge": "Reinforcement learning policies are often black boxes, making it difficult to understand and debug agent behavior. Researchers need interpretable visualizations to improve policy optimization.",
-      "solution": "Built an interactive visualization dashboard that exposes Action/Reward/Value distributions, enabling detailed exploration and analysis of RL model policies. The system contributed to a 20% improvement in policy optimization.",
+      "solution": "Built an interactive visualization dashboard that exposes Action/Reward/Value distributions, enabling detailed exploration and analysis of RL model policies. The system facilitated a deeper understanding of policy summarization effects.",
       "tech": ["Python", "D3.js", "React", "OpenAI Gym", "Reinforcement Learning"],
       "highlights": [
         "Interactive CAPS algorithm manipulation",
         "Action/Reward/Value distribution analysis",
-        "20% improvement in policy optimization",
-        "Journal paper submitted to Visual Informatics 2024"
+        "Mountain Car and Lunar Lander environments",
+        "Improved policy understanding and optimization"
       ],
-      "start": "Spring 2023",
-      "end": "Spring 2023",
+      "start": "Jan 2023",
+      "end": "Jan 2023",
       "live": null,
       "repo": null,
-      "paper": "Submitted to Visual Informatics 2024"
+      "paper": null
     },
     {
       "id": "asugpt",
@@ -180,18 +181,128 @@
       "subtitle": "Statistical Machine Learning, ASU",
       "hero": "/projects/anomaly-hero.jpg",
       "gallery": ["/projects/anomaly-1.jpg"],
-      "description": "Comprehensive study of supervised and unsupervised machine learning techniques for detecting rare and unusual instances in time-series Walmart data.",
+      "description": "Supervised and unsupervised machine learning techniques for detecting anomalies in time-series Walmart financial data with 90% accuracy using F1 performance metrics.",
       "challenge": "Identify anomalies in large-scale time-series retail data using both labeled and unlabeled approaches, optimizing for both accuracy and computational efficiency.",
-      "solution": "Applied multiple algorithms including XGBoost, SVM, MLP for supervised learning, and One-Class SVM, Isolation Forest, DBSCAN, FB Prophet, and GluonTS for unsupervised detection. Evaluated performance using MAE, MSE, and F1 metrics.",
-      "tech": ["Python", "XGBoost", "SVM", "DBSCAN", "FB Prophet", "GluonTS", "scikit-learn"],
+      "solution": "Applied multiple algorithms including XGBoost, SVM, MLP, KNN for supervised learning, and One-Class SVM, Isolation Forest, DBSCAN, Prophet, and GluonTS for unsupervised detection. Evaluated performance using MAE, MSE, and F1 metrics.",
+      "tech": ["Python", "XGBoost", "SVM", "DBSCAN", "Prophet", "GluonTS", "scikit-learn"],
       "highlights": [
+        "90% accuracy on time-series anomaly detection",
         "Comparative analysis of 10+ ML algorithms",
         "Both supervised and unsupervised approaches",
-        "Optimized for computational efficiency",
-        "Production-ready anomaly detection pipeline"
+        "Optimized for computational efficiency"
       ],
-      "start": "Spring 2022",
-      "end": "Spring 2022",
+      "start": "Aug 2022",
+      "end": "Dec 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "warehouse-scheduling",
+      "title": "Automated Warehouse Scheduling using Answer Set Programming",
+      "subtitle": "Knowledge Representation, ASU",
+      "hero": null,
+      "gallery": [],
+      "description": "Automated warehouse scheduling system using Answer Set Programming (ASP) with Clingo to optimize order processing in warehouses like Amazon.",
+      "challenge": "Optimize warehouse order processing with complex constraints including robot movement, shelf manipulation, and product delivery while minimizing returns.",
+      "solution": "Implemented warehouse-specific constraints and actions using ASP with Clingo, employing rigorous testing and step-by-step approach to break down complex scenarios, leading to optimal scheduling solutions.",
+      "tech": ["Answer Set Programming", "Clingo", "Python", "Optimization"],
+      "highlights": [
+        "Optimal warehouse scheduling using ASP",
+        "Robot movement and shelf manipulation logic",
+        "Efficient order processing and delivery",
+        "Minimized product returns"
+      ],
+      "start": "Aug 2022",
+      "end": "Dec 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "image-recognition-cloud",
+      "title": "Image Recognition as a Service",
+      "subtitle": "Cloud Computing, ASU",
+      "hero": null,
+      "gallery": [],
+      "description": "Scalable cloud-based image recognition service using AWS EC2, SQS, and S3 with auto-scaling capabilities.",
+      "challenge": "Build a scalable serverless application that can handle multiple concurrent image recognition requests efficiently while managing resources dynamically.",
+      "solution": "Hosted Flask web server on AWS EC2 using SQS request queue to scale the app tier with a greedy approach creating an app-tier EC2 instance for every 4 requests. Developed serverless application for face recognition on classroom videos, storing images and results in S3 buckets.",
+      "tech": ["Python", "Flask", "AWS EC2", "AWS SQS", "AWS S3", "Image Recognition"],
+      "highlights": [
+        "Auto-scaling based on request queue depth",
+        "Greedy scaling algorithm (1 instance per 4 requests)",
+        "S3 integration for image and result storage",
+        "Face recognition on video streams"
+      ],
+      "start": "Aug 2022",
+      "end": "Dec 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "polyglot-ai",
+      "title": "Polyglot AI: Multilingual Translation Service",
+      "subtitle": "Cloud Computing, ASU",
+      "hero": null,
+      "gallery": [],
+      "description": "AI-powered multilingual translation service using Hugging Face Transformers with T5 and MarianMT models.",
+      "challenge": "Create a translation service that can handle multiple simultaneous requests across various languages while maintaining high accuracy and responsiveness.",
+      "solution": "Curated and preprocessed multilingual datasets, fine-tuned T5 and MarianMT models, and integrated them into a user-friendly interface supporting multiple simultaneous translation requests.",
+      "tech": ["Python", "Hugging Face", "Transformers", "T5", "MarianMT", "NLP"],
+      "highlights": [
+        "Multiple language pair support",
+        "State-of-the-art T5 and MarianMT models",
+        "Concurrent request handling",
+        "User-friendly translation interface"
+      ],
+      "start": "Aug 2022",
+      "end": "Dec 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "nas-cifar10",
+      "title": "Analysing Neural Architecture Search for Image Classification",
+      "subtitle": "Data-Intensive Systems, ASU",
+      "hero": null,
+      "gallery": [],
+      "description": "Implementation and analysis of Google's Model Search and Neural Architecture Transfer (NAT) techniques for CIFAR-10 image classification.",
+      "challenge": "Compare NAS techniques without extensive computational budgets while finding optimal architectures for specific tasks.",
+      "solution": "Explored NAS-Bench 101 architecture dataset enabling rigorous algorithm comparison. Demonstrated NAT as large-scale, multi-objective neural architecture search for custom task-specific models.",
+      "tech": ["Python", "TensorFlow", "NAS", "CIFAR-10", "Neural Architecture Search"],
+      "highlights": [
+        "Google Model Search implementation",
+        "Neural Architecture Transfer (NAT) analysis",
+        "NAS-Bench 101 exploration",
+        "Multi-objective architecture optimization"
+      ],
+      "start": "Jan 2022",
+      "end": "May 2022",
+      "live": null,
+      "repo": null,
+      "paper": null
+    },
+    {
+      "id": "telemedicine-forecasting",
+      "title": "Telemedicine Consultation Demand Forecasting",
+      "subtitle": "Data Science, ASU",
+      "hero": null,
+      "gallery": [],
+      "description": "Demand forecasting model for telemedicine consultations using time-series analysis and machine learning with 90% accuracy.",
+      "challenge": "Predict telemedicine consultation demand patterns to optimize resource allocation and service capacity.",
+      "solution": "Leveraged historical data from 50,000+ consultations using ARIMA and XGBoost for time-series prediction. Utilized SQL for data management, Python for modeling, and Tableau for trend visualization.",
+      "tech": ["Python", "SQL", "Tableau", "ARIMA", "XGBoost", "Time-Series Analysis"],
+      "highlights": [
+        "90% prediction accuracy",
+        "50,000+ consultation data points analyzed",
+        "ARIMA and XGBoost hybrid approach",
+        "Tableau dashboards for visualization"
+      ],
+      "start": "Jan 2022",
+      "end": "May 2022",
       "live": null,
       "repo": null,
       "paper": null
@@ -207,11 +318,16 @@
       "end": "May 2023",
       "gpa": "3.93 / 4.00",
       "courses": [
-        "Artificial Intelligence",
-        "Machine Vision & Pattern Recognition",
-        "Data Intensive Systems for Machine Learning",
-        "Data Science",
-        "Cloud Computing"
+        "Data Mining (CSE 572)",
+        "Data Processing at Scale (CSE 511)",
+        "Machine Vision and Pattern Recognition (EEE 515)",
+        "Foundations of Algorithms (CSE 551)",
+        "Data-Intensive Systems for Machine Learning (CSE 598)",
+        "Data Science for System Decision Analytics (CSE 598)",
+        "Cloud Computing (CSE 546)",
+        "Knowledge Representation and Reasoning (CSE 579)",
+        "Statistical Machine Learning (CSE 575)",
+        "Data Visualization (CSE 578)"
       ]
     },
     {
@@ -229,6 +345,67 @@
         "Computer Networks",
         "Computer Organization & Architecture"
       ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Introduction to TensorFlow for AI, ML and Deep Learning",
+      "issuer": "deeplearning.ai",
+      "date": "Apr 2020",
+      "credentialId": "QUFD8Y92XE9Y",
+      "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/QUFD8Y92XE9Y"
+    },
+    {
+      "name": "MTA: Introduction to Programming Using Python",
+      "issuer": "Microsoft",
+      "date": "Jan 2020",
+      "credentialId": null,
+      "credentialUrl": null
+    },
+    {
+      "name": "IRB - Biomedical Research (Group 1)",
+      "issuer": "CITI Program",
+      "date": "Sep 2022",
+      "expires": "Sep 2026",
+      "credentialId": "51320718",
+      "credentialUrl": null
+    },
+    {
+      "name": "Conflicts of Interest",
+      "issuer": "CITI Program",
+      "date": "Sep 2022",
+      "expires": "Sep 2026",
+      "credentialId": "51320721",
+      "credentialUrl": null
+    },
+    {
+      "name": "Business Analyst",
+      "issuer": "Aspiring Minds",
+      "date": "Jul 2019",
+      "credentialId": "11262304-94",
+      "credentialUrl": null
+    },
+    {
+      "name": "Data Processing Specialist",
+      "issuer": "Aspiring Minds",
+      "date": "Jul 2019",
+      "credentialId": "11262304-211",
+      "credentialUrl": null
+    },
+    {
+      "name": "Software Development Trainee",
+      "issuer": "Aspiring Minds",
+      "date": "Jul 2019",
+      "credentialId": "11262304-166",
+      "credentialUrl": null
+    }
+  ],
+  "publications": [
+    {
+      "title": "Person of Interest Identification using Gait Recognition",
+      "publisher": "DRDO DSJ (Defence Science Journal)",
+      "date": "Jul 2020",
+      "url": null
     }
   ],
   "awards": [],
