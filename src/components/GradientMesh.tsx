@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 interface GradientMeshProps {
   variant?: 'hero' | 'about' | 'skills' | 'experience' | 'projects' | 'courses' | 'certifications' | 'contact'
@@ -9,14 +9,16 @@ interface GradientMeshProps {
 }
 
 export default function GradientMesh({ variant = 'hero', className = '' }: GradientMeshProps) {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  })
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.4, 0.7, 0.4])
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(mediaQuery.matches)
+
+    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
+    mediaQuery.addEventListener('change', handler)
+    return () => mediaQuery.removeEventListener('change', handler)
+  }, [])
 
   const gradients = {
     hero: {
@@ -80,14 +82,10 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
   const selectedGradients = gradients[variant]
 
   return (
-    <motion.div
-      ref={ref}
-      style={{ y, opacity }}
-      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
-    >
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {/* Gradient layer 1 - Main color */}
       <motion.div
-        animate={{
+        animate={prefersReducedMotion ? {} : {
           scale: [1, 1.15, 1],
           rotate: [0, 8, 0],
           x: ['0%', '5%', '0%'],
@@ -101,12 +99,14 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
         style={{
           background: selectedGradients.gradient1,
           filter: 'blur(60px)',
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       />
 
       {/* Gradient layer 2 - Secondary color */}
       <motion.div
-        animate={{
+        animate={prefersReducedMotion ? {} : {
           scale: [1, 1.2, 1],
           rotate: [0, -10, 0],
           x: ['0%', '-3%', '0%'],
@@ -121,12 +121,14 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
         style={{
           background: selectedGradients.gradient2,
           filter: 'blur(80px)',
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       />
 
       {/* Gradient layer 3 - Accent color */}
       <motion.div
-        animate={{
+        animate={prefersReducedMotion ? {} : {
           scale: [1, 1.25, 1],
           rotate: [0, 6, 0],
           y: ['0%', '5%', '0%'],
@@ -141,12 +143,14 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
         style={{
           background: selectedGradients.gradient3,
           filter: 'blur(100px)',
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       />
 
       {/* Gradient layer 4 - Highlight */}
       <motion.div
-        animate={{
+        animate={prefersReducedMotion ? {} : {
           scale: [1, 1.18, 1],
           rotate: [0, -7, 0],
           x: ['0%', '4%', '0%'],
@@ -162,6 +166,8 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
         style={{
           background: selectedGradients.gradient4,
           filter: 'blur(70px)',
+          willChange: 'transform',
+          transform: 'translateZ(0)',
         }}
       />
 
@@ -175,6 +181,6 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
 
       {/* Subtle vignette effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--bg-primary)_100%)] opacity-30" />
-    </motion.div>
+    </div>
   )
 }

@@ -44,7 +44,7 @@ export default function Experience() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="container-custom"
+        className="container-custom relative z-10"
       >
         <motion.h2 variants={itemVariants} className="heading-lg text-center mb-16">
           Experience
