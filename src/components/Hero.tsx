@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import resumeData from '@/data/resume.json'
 import ScrollFrame from './ScrollFrame'
 import GradientMesh from './GradientMesh'
+import AnimatedText, { AnimatedGradientText } from './AnimatedText'
+import MagneticButton from './MagneticButton'
 
 /**
  * Hero Component - Apple-style immersive scroll entrance
@@ -90,15 +92,16 @@ export default function Hero() {
 
           {/* Main headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
             className="heading-xl mb-6"
           >
-            Hi, I'm{' '}
-            <span className="gradient-text">
-              {resumeData.name.split(' ')[0]}
-            </span>
+            <AnimatedText text="Hi, I'm" delay={0.3} />{' '}
+            <AnimatedGradientText
+              text={resumeData.name.split(' ')[0]}
+              delay={0.5}
+            />
           </motion.h1>
 
           {/* Subtitle */}
@@ -128,20 +131,24 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <button
-              onClick={handleViewWork}
-              className="btn-primary"
-              aria-label="View my work"
-            >
-              View Work
-            </button>
-            <button
-              onClick={handleDownloadResume}
-              className="btn-secondary"
-              aria-label="Download resume"
-            >
-              Download Resume
-            </button>
+            <MagneticButton strength={0.4}>
+              <button
+                onClick={handleViewWork}
+                className="btn-primary"
+                aria-label="View my work"
+              >
+                View Work
+              </button>
+            </MagneticButton>
+            <MagneticButton strength={0.4}>
+              <button
+                onClick={handleDownloadResume}
+                className="btn-secondary"
+                aria-label="Download resume"
+              >
+                Download Resume
+              </button>
+            </MagneticButton>
           </motion.div>
         </motion.div>
       </div>

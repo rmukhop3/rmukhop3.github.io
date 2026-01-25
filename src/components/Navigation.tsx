@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from './ThemeProvider'
 import Icon from './Icon'
+import MagneticButton from './MagneticButton'
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -65,30 +66,33 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleNavClick(item.href)
-                }}
-                className="text-[var(--text-secondary)] hover:text-accent transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </a>
+              <MagneticButton key={item.name} strength={0.2}>
+                <a
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleNavClick(item.href)
+                  }}
+                  className="text-[var(--text-secondary)] hover:text-accent transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </a>
+              </MagneticButton>
             ))}
 
             {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors duration-200"
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-            >
-              <Icon
-                name={theme === 'light' ? 'moon' : 'sun'}
-                className="w-5 h-5"
-              />
-            </button>
+            <MagneticButton strength={0.3}>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg hover:bg-[var(--bg-secondary)] transition-colors duration-200"
+                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              >
+                <Icon
+                  name={theme === 'light' ? 'moon' : 'sun'}
+                  className="w-5 h-5"
+                />
+              </button>
+            </MagneticButton>
           </div>
 
           {/* Mobile Menu Button */}

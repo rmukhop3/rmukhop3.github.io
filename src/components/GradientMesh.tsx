@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 
 interface GradientMeshProps {
   variant?: 'hero' | 'about' | 'skills' | 'experience' | 'projects' | 'courses' | 'certifications' | 'contact'
@@ -9,7 +8,7 @@ interface GradientMeshProps {
 }
 
 export default function GradientMesh({ variant = 'hero', className = '' }: GradientMeshProps) {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(true) // Default true to prevent flash
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -82,100 +81,57 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
   const selectedGradients = gradients[variant]
 
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
-      {/* Gradient layer 1 - Main color */}
-      <motion.div
-        animate={prefersReducedMotion ? {} : {
-          scale: [1, 1.15, 1],
-          rotate: [0, 8, 0],
-          x: ['0%', '5%', '0%'],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        className="absolute inset-0"
+    <div 
+      className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}
+      style={{ contain: 'strict' }}
+    >
+      {/* Gradient layer 1 - Main color - CSS animation for performance */}
+      <div
+        className={`absolute inset-0 ${prefersReducedMotion ? '' : 'animate-gradient-1'}`}
         style={{
           background: selectedGradients.gradient1,
           filter: 'blur(60px)',
-          willChange: 'transform',
           transform: 'translateZ(0)',
         }}
       />
 
       {/* Gradient layer 2 - Secondary color */}
-      <motion.div
-        animate={prefersReducedMotion ? {} : {
-          scale: [1, 1.2, 1],
-          rotate: [0, -10, 0],
-          x: ['0%', '-3%', '0%'],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 2,
-        }}
-        className="absolute inset-0"
+      <div
+        className={`absolute inset-0 ${prefersReducedMotion ? '' : 'animate-gradient-2'}`}
         style={{
           background: selectedGradients.gradient2,
           filter: 'blur(80px)',
-          willChange: 'transform',
           transform: 'translateZ(0)',
         }}
       />
 
-      {/* Gradient layer 3 - Accent color */}
-      <motion.div
-        animate={prefersReducedMotion ? {} : {
-          scale: [1, 1.25, 1],
-          rotate: [0, 6, 0],
-          y: ['0%', '5%', '0%'],
-        }}
-        transition={{
-          duration: 35,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 4,
-        }}
+      {/* Static gradient layers for depth without animation overhead */}
+      <div
         className="absolute inset-0"
         style={{
           background: selectedGradients.gradient3,
           filter: 'blur(100px)',
-          willChange: 'transform',
+          opacity: 0.7,
           transform: 'translateZ(0)',
         }}
       />
 
-      {/* Gradient layer 4 - Highlight */}
-      <motion.div
-        animate={prefersReducedMotion ? {} : {
-          scale: [1, 1.18, 1],
-          rotate: [0, -7, 0],
-          x: ['0%', '4%', '0%'],
-          y: ['0%', '-3%', '0%'],
-        }}
-        transition={{
-          duration: 28,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 1,
-        }}
+      <div
         className="absolute inset-0"
         style={{
           background: selectedGradients.gradient4,
           filter: 'blur(70px)',
-          willChange: 'transform',
+          opacity: 0.5,
           transform: 'translateZ(0)',
         }}
       />
 
       {/* Noise texture overlay for depth */}
       <div
-        className="absolute inset-0 opacity-[0.03] mix-blend-overlay"
+        className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          transform: 'translateZ(0)',
         }}
       />
 

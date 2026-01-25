@@ -44,10 +44,17 @@
 
   body {
     @apply bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Optimize for smooth animations */
+  .will-change-transform {
+    will-change: transform;
   }
 
   /* Custom scrollbar */
@@ -121,6 +128,7 @@
   /* Section */
   .section {
     @apply py-20 md:py-32;
+    contain: layout style paint;
   }
 
   /* Section background with smooth blending - fades to white at edges */
@@ -190,6 +198,35 @@
 
   .delay-400 {
     animation-delay: 400ms;
+  }
+
+  /* GPU-accelerated gradient animations */
+  .animate-gradient-1 {
+    animation: gradient-float-1 25s ease-in-out infinite;
+  }
+
+  .animate-gradient-2 {
+    animation: gradient-float-2 30s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+}
+
+/* Gradient keyframe animations - GPU accelerated */
+@keyframes gradient-float-1 {
+  0%, 100% {
+    transform: translateZ(0) scale(1) rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: translateZ(0) scale(1.1) rotate(5deg) translateX(3%);
+  }
+}
+
+@keyframes gradient-float-2 {
+  0%, 100% {
+    transform: translateZ(0) scale(1) rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: translateZ(0) scale(1.15) rotate(-6deg) translateX(-2%);
   }
 }
 
