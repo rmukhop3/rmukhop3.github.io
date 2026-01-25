@@ -37,7 +37,8 @@ export default function Experience() {
   }
 
   return (
-    <section id="experience" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="experience" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-secondary" />
       <GradientMesh variant="experience" />
       <motion.div
         ref={ref}

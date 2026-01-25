@@ -41,7 +41,8 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="section relative bg-[var(--bg-primary)] overflow-hidden">
+    <section id="skills" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-primary" />
       <GradientMesh variant="skills" />
       <motion.div
         ref={ref}

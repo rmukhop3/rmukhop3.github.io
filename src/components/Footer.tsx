@@ -36,7 +36,9 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-[var(--bg-secondary)] border-t border-[var(--border-color)] no-print">
+    <footer className="relative bg-[var(--bg-secondary)] no-print">
+      {/* Gradient blend at top */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[var(--bg-secondary)]" style={{ transform: 'translateY(-100%)' }} />
       <div className="container-custom py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}

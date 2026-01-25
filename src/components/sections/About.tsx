@@ -39,7 +39,8 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="about" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-secondary" />
       <GradientMesh variant="about" />
       <motion.div
         ref={ref}

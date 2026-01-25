@@ -69,7 +69,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="contact" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-secondary" />
       <GradientMesh variant="contact" />
       <motion.div
         ref={ref}

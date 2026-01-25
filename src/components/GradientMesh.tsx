@@ -29,53 +29,53 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
       gradient4: 'radial-gradient(ellipse 50% 60% at 90% 20%, rgba(6, 182, 212, 0.25), transparent)',
     },
     about: {
-      // Purple to Violet gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.35), transparent)',
-      gradient2: 'radial-gradient(ellipse 70% 60% at 80% 50%, rgba(167, 139, 250, 0.25), transparent)',
-      gradient3: 'radial-gradient(ellipse 60% 80% at 20% 100%, rgba(124, 58, 237, 0.3), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 50% at 10% 30%, rgba(196, 181, 253, 0.2), transparent)',
+      // Purple to Violet gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(139, 92, 246, 0.35), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(167, 139, 250, 0.25), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(124, 58, 237, 0.3), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 15% 50%, rgba(196, 181, 253, 0.2), transparent)',
     },
     skills: {
-      // Cyan to Blue gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(6, 182, 212, 0.35), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(59, 130, 246, 0.3), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(14, 165, 233, 0.25), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 90% 20%, rgba(34, 211, 238, 0.2), transparent)',
+      // Cyan to Blue gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(6, 182, 212, 0.35), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(59, 130, 246, 0.3), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(14, 165, 233, 0.25), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 85% 50%, rgba(34, 211, 238, 0.2), transparent)',
     },
     experience: {
-      // Emerald to Teal gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.3), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(20, 184, 166, 0.25), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(5, 150, 105, 0.3), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 10% 20%, rgba(45, 212, 191, 0.2), transparent)',
+      // Emerald to Teal gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(16, 185, 129, 0.3), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(20, 184, 166, 0.25), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(5, 150, 105, 0.3), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 15% 50%, rgba(45, 212, 191, 0.2), transparent)',
     },
     projects: {
-      // Blue to Indigo gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.35), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(99, 102, 241, 0.3), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(79, 70, 229, 0.25), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 90% 10%, rgba(129, 140, 248, 0.2), transparent)',
+      // Blue to Indigo gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(59, 130, 246, 0.35), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(99, 102, 241, 0.3), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(79, 70, 229, 0.25), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 85% 50%, rgba(129, 140, 248, 0.2), transparent)',
     },
     courses: {
-      // Orange to Amber gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251, 146, 60, 0.3), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(245, 158, 11, 0.25), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(249, 115, 22, 0.3), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 10% 20%, rgba(252, 211, 77, 0.2), transparent)',
+      // Orange to Amber gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(251, 146, 60, 0.3), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(245, 158, 11, 0.25), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(249, 115, 22, 0.3), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 15% 50%, rgba(252, 211, 77, 0.2), transparent)',
     },
     certifications: {
-      // Pink to Rose gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(236, 72, 153, 0.35), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(251, 113, 133, 0.3), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(219, 39, 119, 0.28), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 90% 15%, rgba(253, 164, 175, 0.22), transparent)',
+      // Pink to Rose gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(236, 72, 153, 0.35), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(251, 113, 133, 0.3), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(219, 39, 119, 0.28), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 85% 50%, rgba(253, 164, 175, 0.22), transparent)',
     },
     contact: {
-      // Violet to Fuchsia gradient
-      gradient1: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(167, 139, 250, 0.35), transparent)',
-      gradient2: 'radial-gradient(ellipse 60% 50% at 80% 50%, rgba(232, 121, 249, 0.3), transparent)',
-      gradient3: 'radial-gradient(ellipse 70% 80% at 20% 100%, rgba(192, 132, 252, 0.25), transparent)',
-      gradient4: 'radial-gradient(ellipse 50% 60% at 10% 10%, rgba(240, 171, 252, 0.2), transparent)',
+      // Violet to Fuchsia gradient - centered
+      gradient1: 'radial-gradient(ellipse 90% 40% at 50% 50%, rgba(167, 139, 250, 0.35), transparent)',
+      gradient2: 'radial-gradient(ellipse 70% 50% at 75% 45%, rgba(232, 121, 249, 0.3), transparent)',
+      gradient3: 'radial-gradient(ellipse 60% 45% at 25% 55%, rgba(192, 132, 252, 0.25), transparent)',
+      gradient4: 'radial-gradient(ellipse 50% 40% at 15% 50%, rgba(240, 171, 252, 0.2), transparent)',
     },
   }
 
@@ -181,6 +181,14 @@ export default function GradientMesh({ variant = 'hero', className = '' }: Gradi
 
       {/* Subtle vignette effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_var(--bg-primary)_100%)] opacity-30" />
+
+      {/* Vertical fade mask - fades to white/primary at top and bottom */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `linear-gradient(to bottom, var(--bg-primary) 0%, transparent 25%, transparent 75%, var(--bg-primary) 100%)`,
+        }}
+      />
     </div>
   )
 }

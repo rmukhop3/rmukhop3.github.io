@@ -31,7 +31,8 @@ export default function Courses() {
   }
 
   return (
-    <section id="courses" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+    <section id="courses" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-secondary" />
       <GradientMesh variant="courses" />
       <motion.div
         ref={ref}

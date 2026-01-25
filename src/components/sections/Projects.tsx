@@ -40,7 +40,8 @@ export default function Projects() {
     : null
 
   return (
-    <section id="projects" className="section relative bg-[var(--bg-primary)] overflow-hidden">
+    <section id="projects" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-primary" />
       <GradientMesh variant="projects" />
       <motion.div
         ref={ref}

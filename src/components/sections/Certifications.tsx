@@ -32,7 +32,8 @@ export default function Certifications() {
   }
 
   return (
-    <section id="certifications" className="section relative bg-[var(--bg-primary)] overflow-hidden">
+    <section id="certifications" className="section relative overflow-hidden">
+      <div className="absolute inset-0 section-bg-primary" />
       <GradientMesh variant="certifications" />
       <motion.div
         ref={ref}

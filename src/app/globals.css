@@ -123,6 +123,27 @@
     @apply py-20 md:py-32;
   }
 
+  /* Section background with smooth blending - fades to white at edges */
+  .section-bg-primary {
+    background: linear-gradient(
+      to bottom,
+      var(--bg-primary) 0%,
+      var(--bg-primary) 20%,
+      var(--bg-primary) 80%,
+      var(--bg-primary) 100%
+    );
+  }
+
+  .section-bg-secondary {
+    background: linear-gradient(
+      to bottom,
+      var(--bg-primary) 0%,
+      var(--bg-secondary) 20%,
+      var(--bg-secondary) 80%,
+      var(--bg-primary) 100%
+    );
+  }
+
   /* Heading styles */
   .heading-xl {
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight;

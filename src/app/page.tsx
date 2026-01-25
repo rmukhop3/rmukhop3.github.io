@@ -11,7 +11,7 @@ import Navigation from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative bg-[var(--bg-primary)]">
       <Navigation />
       <Hero />
       <About />
