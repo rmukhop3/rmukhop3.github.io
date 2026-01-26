@@ -13,17 +13,18 @@
     "preload-frames": "node scripts/preload-frames.js"
   },
   "dependencies": {
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.16",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "framer-motion": "^10.16.16",
-    "clsx": "^2.0.0",
     "react-intersection-observer": "^9.5.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@types/node": "^20.10.5",
+    "@types/prop-types": "^15.7.15",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "autoprefixer": "^10.4.16",
