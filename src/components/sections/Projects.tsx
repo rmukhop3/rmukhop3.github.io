@@ -8,6 +8,7 @@ import ProjectOverlay from '../ProjectOverlay'
 import Icon from '../Icon'
 import GradientMesh from '../GradientMesh'
 import TiltCard from '../TiltCard'
+import { AnimatedHeadingFancy } from '../AnimatedHeading'
 
 export default function Projects() {
   const [ref, inView] = useInView({

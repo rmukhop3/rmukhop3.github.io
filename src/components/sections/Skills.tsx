@@ -51,8 +51,8 @@ export default function Skills() {
         animate={inView ? 'visible' : 'hidden'}
         className="container-custom relative z-10"
       >
-        <motion.h2 variants={categoryVariants} className="heading-lg text-center mb-16">
-          Skills & Expertise
+        <motion.h2 variants={itemVariants} className="heading-lg text-center mb-16">
+          Skills & Technologies
         </motion.h2>
 
         <div className="space-y-12">

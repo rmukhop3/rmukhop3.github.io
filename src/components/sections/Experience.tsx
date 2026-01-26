@@ -48,7 +48,7 @@ export default function Experience() {
         className="container-custom relative z-10"
       >
         <motion.h2 variants={itemVariants} className="heading-lg text-center mb-16">
-          Experience
+          Professional Experience
         </motion.h2>
 
         <div className="max-w-4xl mx-auto">
