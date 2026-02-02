@@ -3,6 +3,7 @@ import About from '@/components/sections/About'
 import Skills from '@/components/sections/Skills'
 import Experience from '@/components/sections/Experience'
 import Projects from '@/components/sections/Projects'
+import GitHubStats from '@/components/sections/GitHubStats'
 import Education from '@/components/sections/Education'
 import Publications from '@/components/sections/Publications'
 import Courses from '@/components/sections/Courses'
@@ -22,6 +23,7 @@ export default function Home() {
       <Education />
       <Publications />
       <Projects />
+      <GitHubStats />
       <Courses />
       <Certifications />
       <Contact />
