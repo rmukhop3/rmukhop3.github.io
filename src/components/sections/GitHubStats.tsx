@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Icon from '../Icon'
 import GradientMesh from '../GradientMesh'
+import { useTheme } from '../ThemeProvider'
 
 // GitHub username from resume data
 const GITHUB_USERNAME = 'rmukhop3'
@@ -15,6 +16,16 @@ const stats = [
   { label: 'Stars Earned', value: '50+', icon: 'star' },
   { label: 'Years Active', value: '5+', icon: 'terminal' },
 ]
+
+// Streak stats - update periodically
+const streakStats = {
+  totalContributions: '1,247',
+  currentStreak: 31,
+  longestStreak: 31,
+  contributionPeriod: 'Oct 23, 2023 - Present',
+  currentStreakDates: 'Jan 2 - Feb 1',
+  longestStreakDates: 'Jan 2 - Feb 1',
+}
 
 const topLanguages = [
   { name: 'Python', percentage: 65, color: '#3572A5' },
@@ -29,6 +40,7 @@ export default function GitHubStats() {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const { theme } = useTheme()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -151,19 +163,115 @@ export default function GitHubStats() {
               </div>
             </div>
 
-            {/* GitHub Streak */}
+            {/* GitHub Streak - Custom Component */}
             <div className="glass rounded-2xl p-6 flex flex-col">
-              <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-6 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                 <Icon name="star" className="w-5 h-5 text-accent" />
                 Contribution Streak
               </h3>
-              <div className="flex-1 flex items-center justify-center">
-                <img
-                  src={`https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USERNAME}&theme=transparent&hide_border=true&ring=8b5cf6&fire=8b5cf6&currStreakLabel=8b5cf6&sideLabels=94a3b8&currStreakNum=1e293b&sideNums=1e293b&dates=64748b&background=00000000`}
-                  alt="GitHub Streak"
-                  className="w-full max-w-sm"
-                  loading="lazy"
-                />
+              <div className="flex-1 flex flex-col justify-center gap-6">
+                {/* Current Streak - Main Feature */}
+                <div className="flex items-center justify-center">
+                  <div className="relative">
+                    <svg className="w-32 h-32" viewBox="0 0 100 100">
+                      {/* Background circle */}
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="none"
+                        stroke="var(--bg-tertiary)"
+                        strokeWidth="6"
+                      />
+                      {/* Animated progress circle */}
+                      <motion.circle
+                        cx="50"
+                        cy="50"
+                        r="42"
+                        fill="none"
+                        stroke="url(#streakGradient)"
+                        strokeWidth="6"
+                        strokeLinecap="round"
+                        strokeDasharray={263.9}
+                        initial={{ strokeDashoffset: 263.9 }}
+                        animate={inView ? { strokeDashoffset: 263.9 * (1 - Math.min(streakStats.currentStreak, 100) / 100) } : {}}
+                        transition={{ duration: 2, ease: 'easeOut' }}
+                        transform="rotate(-90 50 50)"
+                      />
+                      {/* Gradient definition */}
+                      <defs>
+                        <linearGradient id="streakGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#8b5cf6" />
+                          <stop offset="100%" stopColor="#d946ef" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    {/* Center content */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <motion.span
+                        className="text-3xl font-bold text-[var(--text-primary)]"
+                        initial={{ scale: 0 }}
+                        animate={inView ? { scale: 1 } : {}}
+                        transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
+                      >
+                        {streakStats.currentStreak}
+                      </motion.span>
+                      <span className="text-xs text-[var(--text-secondary)]">days</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Current Streak Label */}
+                <div className="text-center">
+                  <motion.div
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <span className="text-lg">🔥</span>
+                    <span className="text-sm font-semibold text-accent">Current Streak</span>
+                  </motion.div>
+                  <p className="text-xs text-[var(--text-tertiary)] mt-2">
+                    {streakStats.currentStreakDates}
+                  </p>
+                </div>
+
+                {/* Stats Row */}
+                <div className="grid grid-cols-2 gap-3 mt-2">
+                  <motion.div
+                    className="text-center p-3 rounded-xl bg-[var(--bg-tertiary)]/30 hover:bg-[var(--bg-tertiary)]/50 transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <motion.div
+                      className="text-xl font-bold text-[var(--text-primary)]"
+                      initial={{ opacity: 0 }}
+                      animate={inView ? { opacity: 1 } : {}}
+                      transition={{ delay: 1 }}
+                    >
+                      {streakStats.totalContributions}
+                    </motion.div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Total Commits
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    className="text-center p-3 rounded-xl bg-[var(--bg-tertiary)]/30 hover:bg-[var(--bg-tertiary)]/50 transition-colors"
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <motion.div
+                      className="text-xl font-bold text-[var(--text-primary)]"
+                      initial={{ opacity: 0 }}
+                      animate={inView ? { opacity: 1 } : {}}
+                      transition={{ delay: 1.1 }}
+                    >
+                      {streakStats.longestStreak}
+                    </motion.div>
+                    <div className="text-xs text-[var(--text-secondary)]">
+                      Best Streak
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -182,9 +290,13 @@ export default function GitHubStats() {
                 src={`https://ghchart.rshah.org/8b5cf6/${GITHUB_USERNAME}`}
                 alt="GitHub Contribution Graph"
                 className="w-full max-w-4xl rounded-lg min-w-[600px]"
+                style={theme === 'dark' ? { filter: 'invert(1) hue-rotate(180deg) saturate(1.5) brightness(0.9)' } : {}}
                 loading="lazy"
               />
             </div>
+            <p className="text-center text-xs text-[var(--text-tertiary)] mt-4">
+              Each square represents a day of contributions
+            </p>
           </motion.div>
         </div>
       </motion.div>
