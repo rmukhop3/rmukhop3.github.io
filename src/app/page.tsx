@@ -6,7 +6,6 @@ import Projects from '@/components/sections/Projects'
 import GitHubStats from '@/components/sections/GitHubStats'
 import Education from '@/components/sections/Education'
 import Publications from '@/components/sections/Publications'
-import Courses from '@/components/sections/Courses'
 import Certifications from '@/components/sections/Certifications'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/Footer'
@@ -24,7 +23,6 @@ export default function Home() {
       <Publications />
       <Projects />
       <GitHubStats />
-      <Courses />
       <Certifications />
       <Contact />
       <Footer />

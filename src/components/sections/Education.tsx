@@ -84,9 +84,9 @@ export default function Education() {
                   </div>
 
                   {/* Details */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Left column */}
-                    <div className="space-y-4">
+                  <div className="space-y-4">
+                    {/* Top row - Specialization and GPA */}
+                    <div className="flex flex-wrap gap-6">
                       {edu.specialization && (
                         <div className="flex items-center gap-2">
                           <Icon name="star" className="w-5 h-5 text-accent" />
@@ -106,22 +106,23 @@ export default function Education() {
                       )}
                     </div>
 
-                    {/* Right column - Courses */}
+                    {/* Courses - Full width grid */}
                     {edu.courses && edu.courses.length > 0 && (
                       <div>
                         <h4 className="text-sm font-semibold text-[var(--text-tertiary)] uppercase tracking-wider mb-3">
                           Key Courses
                         </h4>
-                        <div className="flex flex-wrap gap-2">
+                        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-1.5">
                           {edu.courses.map((course, i) => (
-                            <span
+                            <li
                               key={i}
-                              className="px-3 py-1 text-xs font-medium rounded-full bg-accent/10 text-accent"
+                              className="flex items-start gap-2 text-sm text-[var(--text-secondary)] group"
                             >
-                              {course}
-                            </span>
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                              <span className="group-hover:text-accent transition-colors">{course}</span>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       </div>
                     )}
                   </div>
